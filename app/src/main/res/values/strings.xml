@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LatihanPaM1</string>
+    <string name="textTerra">ActivityTerra</string>
+    <string name="nextButton">Next Activity</string>
+    <string name="textMars">ActivityMars</string>
+    <string name="stringName">Nama</string>
+    <string name="stringNim">NIM</string>
+    <string name="stringIpk">IPK</string>
+    <string name="stringAlamat">Alamat</string>
+    <string name="textVenus">ActivityVenus</string>
+</resources>
