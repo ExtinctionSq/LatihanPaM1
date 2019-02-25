@@ -1,8 +1,10 @@
 package com.example.latihanpam1;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
@@ -22,6 +24,10 @@ public class ThirdActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Student student3 = intent.getParcelableExtra("student2");
 
+        android.support.v7.app.ActionBar actionBar =getSupportActionBar();
+        assert actionBar != null;
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         displayOne=findViewById(R.id.nama3);
         displayTwo=findViewById(R.id.nim3);
         displayThree=findViewById(R.id.alamat3);
@@ -36,5 +42,10 @@ public class ThirdActivity extends AppCompatActivity {
         displayTwo.setText(Integer.toString(nim)+" second intent");
         displayThree.setText(alamat+" second intent");
         displayFour.setText(Double.toString(ipk)+" second intent");
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
     }
 }
